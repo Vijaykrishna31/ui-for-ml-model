@@ -5,3 +5,7 @@ pandas
 scikit-learn
 seaborn
 statsmodels
+
+
+# Run the Flask app using:
+# python app.py
