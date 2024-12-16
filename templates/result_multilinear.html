@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Multilinear Regression Results</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h1 class="mb-4">Multilinear Regression Model Results</h1>
+
+    <h2>Model Summary</h2>
+    <ul>
+        <li><strong>Intercept:</strong> {{ model_summary.intercept }}</li>
+        <li><strong>Coefficients:</strong></li>
+        <ul>
+            {% for feature, coef in model_summary.coefficients.items() %}
+                <li>{{ feature }}: {{ coef }}</li>
+            {% endfor %}
+        </ul>
+    </ul>
+
+    {% if plot_url %}
+        <h2>3D Plot (for two features)</h2>
+        <img src="data:image/png;base64,{{ plot_url }}" class="img-fluid" alt="3D Plot">
+    {% endif %}
+
+    <a href="/" class="btn btn-primary mt-4">Upload Another CSV</a>
+</body>
+</html>

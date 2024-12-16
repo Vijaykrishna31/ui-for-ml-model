@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ARIMA Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">ARIMA Model Result</h1>
+        <a href="/" class="btn btn-primary mt-4 mb-5">Upload Another CSV</a>
+
+        <h2>Forecast:</h2>
+        <ul class="list-group">
+            {% for i in forecast %}
+                <li class="list-group-item">{{ i }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2 class="mt-4">Plot:</h2>
+        <img src="data:image/png;base64,{{ plot_url }}" class="img-fluid" alt="Forecast Plot">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
