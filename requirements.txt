@@ -1,10 +1,7 @@
-Flask==2.0.1
-Jinja2==3.0.1
-Werkzeug==2.0.1
-pandas==1.5.3
-numpy==1.24.0
-statsmodels==0.13.5
-matplotlib==3.7.0
-scikit-learn==1.2.0
-ml-tools==0.1.0  # Replace with actual version if needed.
-seaborn==0.12.2
+Flask==2.3.3
+matplotlib==3.8.1
+numpy==1.26.0
+pandas==2.1.2
+scikit-learn==1.4.2
+seaborn==0.12.3
+statsmodels==0.14.0
