@@ -9,7 +9,7 @@ from models.random_forest_model import run_random_forest_model
 from models.multilinear_regression_model import run_multilinear_regression_model
 
 app = Flask(__name__)
-app.secret_key = "idhellam oru polapa"  # Needed for flash messages
+app.secret_key = "idhellam oru polapa" 
 
 
 @app.route("/")
@@ -87,6 +87,6 @@ def run_model():
         flash("Invalid model type selected.")
         return redirect(url_for("upload_form"))
 
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False)
+
