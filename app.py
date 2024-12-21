@@ -3,6 +3,7 @@
 from flask import Flask, request, render_template, redirect, url_for, flash, session
 import pandas as pd
 import io
+import os
 from models.arima_model import run_arima_model
 from models.decision_tree_model import run_decision_tree_model
 from models.random_forest_model import run_random_forest_model
@@ -88,5 +89,5 @@ def run_model():
         return redirect(url_for("upload_form"))
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=False)
-
+    port = int(os.environ.get("PORT", 5000))  # Use PORT environment variable or default to 5000
+    app.run(host="0.0.0.0", port=port)
