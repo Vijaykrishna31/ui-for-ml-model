@@ -6,8 +6,3 @@ scikit-learn
 seaborn
 statsmodels
 
-web: python app.py
-
-
-# Run the Flask app using:
-# python app.py
